@@ -13,6 +13,7 @@
     --background-toggle: hsl(223, 50%, 87%);
     --gray-text: hsl(225, 20%, 60%);
     --text-background: hsl(227, 35%, 25%);
+    --black: #293356;
     //font
     --font-family: 'Manrope', sans-serif;
     --normal: 600;
@@ -26,10 +27,46 @@ html {
 
 body{
     font-family: var(--font-family);
+    background-image: url("images/bg-pattern.svg");
+    background-repeat: no-repeat;
+    background-position-y: -10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+    color: var(--gray-text);
 }
 
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("images/pattern-circles.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 10rem;
+    font-size: 1.3rem;
+    text-align: center;
+    h3{
+        font-size: 2rem;
+        color: var(--black);
+    }
+}
 main{
-    input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    background: white;
+    min-width: 32.7rem;
+    width: 50%;
+    min-height: 47.8rem;
+    box-shadow: 0px 20px 30px -5px rgba(127, 137, 185, 0.152073);
+    border-radius: 0.8rem;
+    // toggle switch
+    .bill-check{
         appearance: button;
         position: relative;
         -webkit-appearance: none;
@@ -39,7 +76,7 @@ main{
         height: 2.2rem;
         border-radius: 1.5rem;
     }
-    input:after{
+    .bill-check:after{
         content: '';
         background-color: white;
         width: 1.4rem;
@@ -49,11 +86,88 @@ main{
         left: 10%;
         top: 20%;
     }
-    input:checked{
+    .bill-check:checked{
         background-color: var(--soft-cyan);
     }
-    input:checked:after{
+    .bill-check:checked:after{
         left:50%;
     }
-    
+    //
+    .slider{
+        -webkit-appearance: none;
+        width: 27.9rem;
+        height: 0.8rem;
+        position: relative;
+        appearance: input;
+        color: var(--slider-blue);
+    }
+    .slider::-webkit-slider-thumb{
+        appearance: slider;
+        margin-top: -1.5rem;
+        -webkit-appearance: none;
+        width: 4rem;
+        height: 4rem;
+        background-image: url("images/icon-slider.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 10rem;
+        background-color: var(--strong-cyan);
+        box-shadow: 0rem 1.5rem 3rem rgba(0, 255, 231, 0.6);
+
+    }
+    .slider::-webkit-slider-runnable-track{
+        max-height: 0.8rem;
+        background-color: var(--slider-blue);
+        border-radius: 0.5rem
+    }
+    //
+    .sub-type{
+        // min-width: 27.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .discount{
+            background-color: #FEEDE8;
+            outline: none;
+            color: #FF8D68;
+            border-radius: 1rem;
+            font-size: 1rem;
+            opacity: 0.7;
+            margin-left: 0.4rem;
+        }
+    }
+    .payment{
+        font-size: 1.4rem;
+        .total{
+            font-size: 3.2rem;
+            font-weight: var(--bold);
+            color: var(--black);
+        }
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 14.8rem;
+        height: 7.1rem;
+        text-align: center;
+        li{
+            list-style-type: none;
+            margin: 0;
+        }
+        .checked{
+            background-image: url("images/icon-check.svg");
+            background-position: left;
+            background-repeat: no-repeat;
+        }
+    }
+
+    button{
+        width: 17rem;
+        height: 4.1rem;
+        color: #BECDFF;
+        background: #293356;
+        outline:none;
+        border-radius: 2rem;
+    }
 }

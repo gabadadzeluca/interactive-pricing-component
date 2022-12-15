@@ -22,7 +22,7 @@ html {
 
 body {
   font-family: var(--font-family);
-  background-image: url("/images/bg-pattern.svg");
+  background-image: url("images/bg-pattern.svg");
   background-repeat: no-repeat;
   background-position-y: -10rem;
   display: flex;
@@ -36,7 +36,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("/images/pattern-circles.svg");
+  background-image: url("images/pattern-circles.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 10rem;
@@ -163,7 +163,7 @@ main ul li {
   margin: 0;
 }
 main ul .checked {
-  background-image: url("/images/icon-check.svg");
+  background-image: url("images/icon-check.svg");
   background-position: left;
   background-repeat: no-repeat;
 }

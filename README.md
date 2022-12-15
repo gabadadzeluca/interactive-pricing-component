@@ -21,7 +21,7 @@ Users should be able to:
 - Use the slider and toggle to see prices for different page view numbers
 
 ### Screenshot
-![screenshot](/images/screenshot.png)
+![screenshot](/images/scgreenshot.png)
 
 ### Links
 

@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+:root {
+  --soft-cyan: hsl(174, 77%, 80%);
+  --strong-cyan: hsl(174, 86%, 45%);
+  --grayish-red: hsl(14, 92%, 95%);
+  --light-red: hsl(15, 100%, 70%);
+  --pale-blue: hsl(226, 100%, 87%);
+  --main-background: hsl(230, 100%, 99%);
+  --slider-blue: hsl(224, 65%, 95%);
+  --background-toggle: hsl(223, 50%, 87%);
+  --gray-text: hsl(225, 20%, 60%);
+  --text-background: hsl(227, 35%, 25%);
+  --black: #293356;
+  --font-family: "Manrope", sans-serif;
+  --normal: 600;
+  --bold: 800;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-family);
+  background-image: url("/images/bg-pattern.svg");
+  background-repeat: no-repeat;
+  background-position-y: -10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+  color: var(--gray-text);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("/images/pattern-circles.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 10rem;
+  font-size: 1.3rem;
+  text-align: center;
+}
+header h3 {
+  font-size: 2rem;
+  color: var(--black);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  background: white;
+  min-width: 32.7rem;
+  width: 50%;
+  min-height: 47.8rem;
+  box-shadow: 0px 20px 30px -5px rgba(127, 137, 185, 0.152073);
+  border-radius: 0.8rem;
+}
+main #pageviews {
+  margin-right: 0.4rem;
+}
+main .views {
+  letter-spacing: 0.2rem;
+  font-size: 1.2rem;
+}
+main .bill-check {
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  position: relative;
+  -webkit-appearance: none;
+  outline: none;
+  background-color: var(--slider-blue);
+  width: 4.3rem;
+  height: 2.2rem;
+  border-radius: 1.5rem;
+}
+main .bill-check:after {
+  transition: 0.4s;
+  content: "";
+  background-color: white;
+  width: 1.4rem;
+  height: 1.4rem;
+  position: absolute;
+  border-radius: 1.5rem;
+  left: 10%;
+  top: 20%;
+}
+main .bill-check:checked:after {
+  left: 60%;
+}
+main .bill-check:hover {
+  background-color: var(--soft-cyan);
+  cursor: pointer;
+}
+main .slider {
+  -webkit-appearance: none;
+  width: 27.9rem;
+  height: 0.8rem;
+  position: relative;
+  -webkit-appearance: input;
+     -moz-appearance: input;
+          appearance: input;
+  border-radius: 0.5rem;
+  color: var(--slider-blue);
+  outline: none;
+  background: linear-gradient(to right, var(--soft-cyan), var(--slider-blue) 60%);
+}
+main .slider::-webkit-slider-thumb {
+  appearance: slider;
+  -webkit-appearance: none;
+  width: 4rem;
+  height: 4rem;
+  background-image: url("/images/icon-slider.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10rem;
+  background-color: var(--strong-cyan);
+  box-shadow: 0rem 1.5rem 3rem rgba(0, 255, 231, 0.6);
+}
+main .slider::-webkit-slider-thumb:hover {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+main .sub-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .sub-type .discount {
+  background-color: #FEEDE8;
+  outline: none;
+  color: #FF8D68;
+  border-radius: 1rem;
+  font-size: 1rem;
+  opacity: 0.7;
+  margin-left: 0.4rem;
+}
+main .payment {
+  font-size: 1.4rem;
+}
+main .payment .total {
+  font-size: 3.2rem;
+  font-weight: var(--bold);
+  color: var(--black);
+}
+main ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 14.8rem;
+  height: 7.1rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+main ul li {
+  list-style-type: none;
+  margin: 0;
+}
+main ul .checked {
+  background-image: url("/images/icon-check.svg");
+  background-position: left;
+  background-repeat: no-repeat;
+}
+main button {
+  width: 17rem;
+  height: 4.1rem;
+  color: #BECDFF;
+  background: #293356;
+  outline: none;
+  border-radius: 2rem;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 700px) {
+  header h3 {
+    font-size: 2.8rem;
+    margin-bottom: 0;
+  }
+  header p {
+    font-size: 1.5rem;
+  }
+  header div {
+    display: inline-flex;
+  }
+  main {
+    margin-top: 9rem;
+    min-width: 54rem;
+    min-height: 39.7rem;
+  }
+  main .div1 {
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    row-gap: 2.4rem;
+  }
+  main .div1 .views, main .div1 .payment {
+    display: inline-flex;
+    align-items: center;
+  }
+  main .div1 .views {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    justify-content: flex-start;
+    font-size: 1.4rem;
+  }
+  main .div1 .payment {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    justify-content: flex-end;
+  }
+  main .div1 .slider-cls {
+    grid-column: 1/3;
+  }
+  main .div1 .slider {
+    width: 100%;
+  }
+  main .div1 .total {
+    font-size: 4rem;
+  }
+  main .div1 #period {
+    font-size: 1.6rem;
+  }
+  main .footer {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  main .footer ul li {
+    text-align: left;
+  }
+  main .footer ul .checked {
+    padding-left: 1.8rem;
+  }
+  main button:hover {
+    cursor: pointer;
+    color: white;
+  }
+}/*# sourceMappingURL=style.css.map */

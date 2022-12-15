@@ -3,47 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Interactive pricing component</title>
 </head>
 <body>
   <header>
-
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
+    <h3> Simple, traffic-based pricing</h3>
+    <div>
+      <p>
+        Sign-up for our 30-day trial.
+      </p>
+      <p>
+        No credit card required. 
+      </p> 
+    </div>
   </header>
 
   <main>
   
-  <div>
-  <p>Pageviews</p>
-  <div class="slider" id="slider">
-    <span class="slide" id="slide">
-      <img src="images/icon-slider.svg">
-    </span>
-  </div> 
-  <p><span>$</span> /month</p>
-  </div>
+    <div class="div1">
+      <p class="views"><span id="pageviews"></span>PAGEVIEWS</p>
+      <div class="slider-cls">
+        <input type="range" class="slider" id="slider" min="8" max="24" step="4" value="16">
+      </div>
+      <p class="payment"><span id="total" class="total">$</span><span id="period">/month</span></p>
+    </div>
 
-  <div>
-  Monthly Billing
-  <input type="checkbox">
-  Yearly Billing 25% discount
-  </div>
+    <div class="sub-type">
+      <span>Monthly Billing</span>
+      <input type="checkbox" class="bill-check" id="bill-check">
+      <span>Yearly Billing<span class="discount">-25%</span></span>
+    </div>
 
-  <div>
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
-  </div>
+    <div class="footer">
+      <ul>
+        <li class="checked">Unlimited websites</li>
+        <li class="checked">100% data ownership</li>
+        <li class="checked">Email reports</li>
+      </ul>
+    
+    <button class="trial-btn">
+      Start my trial
+    </button>
+    </div>
 
   </main>
 
 </body>
-<script src="index.js"></script>
+<script src="script.js"></script>
 </html>

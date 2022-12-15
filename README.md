@@ -21,12 +21,12 @@ Users should be able to:
 - Use the slider and toggle to see prices for different page view numbers
 
 ### Screenshot
-![screenshot](./images/scgreenshot.png)
+![screenshot](../images/scgreenshot.png)
 
 ### Links
 
 - Solution URL: [GitHub](https://github.com/gabadadzeluca/interactive-pricing-component)
-- Live Site URL: [Live URL]()
+- Live Site URL: [Live URL](https://gabadadzeluca.github.io/interactive-pricing-component/)
 
 ## My process
 
